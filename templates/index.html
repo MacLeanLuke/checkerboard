@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+        td{
+            border: 1px solid black;
+            height: 100px;
+        }
+        .even {
+            background-color: red;
+        }
+        .odd {
+            background-color: black;
+        }
+      </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav
+      class="
+        navbar
+        sticky-top
+        navbar-light navbar-expand{-sm|-md|-lg|-xl|-xxl}
+        row
+        justify-content-center
+      "
+      style="background-color: #e3f2fd"
+    >
+      <div
+        class="
+          col-lg-10 col-sm-12
+          row
+          align-items-center
+          justify-content-center
+        "
+      >
+        <h1>Checkerboard</h1>
+      </div>
+    </nav>
+    <main class="container col-10">
+      <div class="col-10 justify-content-center row align-items-center">
+        <div>
+            <table class="container">
+                {% for row in table %}
+                <tr>
+                    {% for number in row %}
+                    {% if number % 2 == 0: %}
+                        <td class="even"></td>
+                    {% else %}
+                        <td class="odd"></td>
+                    {% endif %}
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+      </div>
+    </main>
+    
+</body>
+</html>
